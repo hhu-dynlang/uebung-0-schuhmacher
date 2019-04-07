@@ -3,7 +3,7 @@ def is_palindrome(s):
         raise Exception('Input should be a string.')
     if len(s) % 2 == 1:
         return False
-    length = len(s) / 2
+    length = int(len(s) / 2)
     for i in range(length):
         if s[i] != s[len(s) - i - 1]:
             return False
@@ -44,3 +44,17 @@ def pascal_array(n):
 #        spaces -= 1
 
 #print_pascal(5)
+
+def flatten(L):
+    if not isinstance(L, list):
+        raise Exception('Input should be a list.')
+    New_L = []
+    for i in range(len(L)):
+        if isinstance(L[i], list):
+            New_L += flatten(L[i])
+        else:
+            New_L += [L[i]]
+    return New_L
+
+#flatten(5)
+#flatten('hallo')   both for exceptions

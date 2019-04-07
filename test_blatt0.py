@@ -1,5 +1,5 @@
 from blatt0 import pascal_array
-#from blatt0 import flatten
+from blatt0 import flatten
 #from blatt0 import fizz_buzz
 #from blatt0 import solve_equation
 #from blatt0 import myint, mybin
@@ -21,7 +21,10 @@ def test_pascal_1():
     assert pascal_array(1) == [[1]]
 
 def test_flatten():
-    pass # TODO
+    assert flatten([[1, 'a'], [4,[567,['frt', 'g']]], 7]) == [1, 'a', 4, 567, 'frt', 'g', 7]
+
+def test_flatten_already_flat():
+    assert flatten([1,2,3,4,5,6]) == [1,2,3,4,5,6]
 
 def test_fizz_buzz():
     pass # TODO
