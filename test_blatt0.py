@@ -14,11 +14,11 @@ def test_is_not_palindrome():
     input = "blabla"
     assert is_palindrome(input) == False
 
-def test_pascal1():
+def test_pascal_5():
     assert pascal_array(5) == [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
 
-def test_pascal_2():
-	assert pascal_array(4) == [[1],[1,1],[1,2,1],[1,3,3,1]]
+def test_pascal_1():
+    assert pascal_array(1) == [[1]]
 
 def test_flatten():
     pass # TODO
