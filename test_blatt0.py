@@ -1,7 +1,7 @@
 from blatt0 import pascal_array
 from blatt0 import flatten
 #from blatt0 import fizz_buzz
-#from blatt0 import solve_equation
+from blatt0 import solve_equation
 #from blatt0 import myint, mybin
 from blatt0 import is_palindrome;
 import random
@@ -30,7 +30,7 @@ def test_fizz_buzz():
     pass # TODO
 
 def test_solve_equation():
-    pass # TODO
+    assert solve_equation(2, 3, 1) == -0.5
 
 #def test_int_to_bin():
 #    input = random.sample(range(1000), 10)

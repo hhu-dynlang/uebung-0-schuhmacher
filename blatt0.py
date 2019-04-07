@@ -1,3 +1,5 @@
+import math
+
 def is_palindrome(s):
     if not isinstance(s, str):
         raise Exception('Input should be a string.')
@@ -58,3 +60,11 @@ def flatten(L):
 
 #flatten(5)
 #flatten('hallo')   both for exceptions
+
+def solve_equation(a,b,c):
+    if not isinstance(a, int) or not isinstance(b, int) or not isinstance(c, int):
+        if not isinstance(a, float) or not isinstance(b, float) or not isinstance(c, float):
+            raise Exception('Input must be numbers.')
+    return (-b+math.sqrt(b*b-4*a*c))/(2*a)
+
+#solve_equation(3,'A',5)
