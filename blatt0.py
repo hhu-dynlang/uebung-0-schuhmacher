@@ -68,3 +68,25 @@ def solve_equation(a,b,c):
     return (-b+math.sqrt(b*b-4*a*c))/(2*a)
 
 #solve_equation(3,'A',5)
+
+def fizz_buzz(n):
+    if not isinstance(n, int):
+        raise Exception('Input must be int.')
+    if n < 1:
+        raise Exception('Input must be greater than 0')
+    L = []
+    for i in range(n):
+        if (i+1)%3 == 0 and (i+1)%5 == 0:
+            L += ['FizzBuzz']
+        elif (i+1)%3 == 0:
+            L += ['Fizz']
+        elif (i+1)%5 == 0:
+            L += ['Buzz']
+        else:
+            L += [i+1]
+    return L
+            
+#fizz_buzz(-4)
+#fizz_buzz('sd')
+
+
