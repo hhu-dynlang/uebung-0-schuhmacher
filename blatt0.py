@@ -87,6 +87,42 @@ def fizz_buzz(n):
     return L
             
 #fizz_buzz(-4)
-#fizz_buzz('sd')
+#fizz_buzz('sd')    Exceptions
 
+def myint(x):
+    if not isinstance(x, str):
+        raise Exception('Input must be string format.')
+    if not x[0] == '0' or not x[1] == 'b':
+        raise Exception('Input must start with 0b.')
+    res = 0
+    power = 1
+    length = len(x)
+    for i in range(length-2):
+        if x[length-i-1] > '1':
+            raise Exception('Input must be binary')
+        if x[length-i-1] == '1':
+            res += power
+        power *= 2
+    return res
 
+#myint(5)
+#myint('0x101')
+#myint('0b130')       
+
+def mybin(n):
+    if not isinstance(n, int):
+        raise Exception('Input must be Integer.')
+    if n < 0:
+        raise Exception('Input must be positive.')
+    res = '0b'
+    res_order = ''
+    if n == 0:
+        res_order += '0'
+    while not n == 0:
+        res_order += str(n%2)
+        n = int(n/2)
+    res += res_order[::-1]
+    return res
+
+#mybin('s')
+#mybin(-1)  Exceptions
